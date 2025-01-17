@@ -8,14 +8,16 @@ LABEL maintainer="James Gebbie-Rayet <james.gebbie@stfc.ac.uk>"
 USER $NB_USER
 WORKDIR $HOME
 
+# Install nb env deps
+RUN pip install --upgrade pip
+RUN pip install jupyterhub-tmpauthenticator
+
+# Install workshop deps
 RUN conda install mdtraj matplotlib numpy -y
 RUN conda install ipywidgets -c conda-forge -y
 RUN conda install nglview
-
-# Python Dependencies for the md_workshop
-RUN pip install --upgrade setuptools
 RUN pip install mdplus
-RUN pip install jupyterhub-tmpauthenticator
+
 
 # Copy lab workspace
 COPY --chown=1000:100 default-37a8.jupyterlab-workspace /home/jovyan/.jupyter/lab/workspaces/default-37a8.jupyterlab-workspace
