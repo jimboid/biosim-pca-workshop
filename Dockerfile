@@ -9,7 +9,6 @@ USER $NB_USER
 WORKDIR $HOME
 
 # Install nb env deps
-RUN pip install --upgrade pip
 RUN pip install jupyterhub-tmpauthenticator
 
 # Install workshop deps
