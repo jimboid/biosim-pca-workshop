@@ -26,7 +26,7 @@ RUN git clone https://github.com/CCPBioSim/pca-workshop.git && \
     mv pca-workshop/* . && \
     mv pca-workshop/.PCA_analysis_of_MD_simulations-1.ipynb . && \
     mv pca-workshop/.PCA_analysis_of_MD_simulations-2.ipynb . && \
-    mv utilities.py /opt/conda/lib/python3.10/site-packages/utilities.py && \
+    mv utilities.py /opt/conda/lib/python3.12/site-packages/utilities.py && \
     rm -r AUTHORS LICENSE README.md pca-workshop
 
 # UNCOMMENT THIS LINE FOR REMOTE DEPLOYMENT
