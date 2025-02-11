@@ -1,4 +1,4 @@
-name: pca workshop
+name: build
 
 on:
   repository_dispatch:
